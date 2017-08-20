@@ -1,8 +1,8 @@
 #include <opencv2/opencv.hpp>
 
 int main(int agrc,  char* argv[]){
-	std::string name1 = "../data/lena.png";
-	std::string name2 = "../data/home.jpg";
+	std::string name1 = "../../data/lena.png";
+	std::string name2 = "../../data/home.jpg";
 
 	cv::Mat img1=cv::imread(name1, 0);
 	cv::Mat img2=cv::imread(name2, 0);

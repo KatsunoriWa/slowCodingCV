@@ -1,0 +1,24 @@
+import numpy as np
+import cv2
+
+a=np.array([ [ 6,  22,  14,   4,  22],
+  [10,  11,  18,   1,   4],
+   [1,  13,   7,  13,   0],
+  [23,  18,   1,  17,   3],
+  [ 3,  18,   0,  14,  23]])
+
+print  a
+print
+print "COLUMN|ASCENDING"
+print cv2.sortIdx(a, cv2.SORT_EVERY_ROW | cv2.SORT_ASCENDING)
+print
+print "COLUMN|DESCENDING"
+print cv2.sortIdx(a, cv2.SORT_EVERY_ROW | cv2.SORT_DESCENDING)
+print
+
+print "COLUMN|ASCENDING"
+print cv2.sortIdx(a, cv2.SORT_EVERY_COLUMN | cv2.SORT_ASCENDING)
+print
+print "COLUMN|DESCENDING"
+print cv2.sortIdx(a, cv2.SORT_EVERY_COLUMN | cv2.SORT_DESCENDING)
+

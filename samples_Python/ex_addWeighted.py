@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import pylab as plt
 
-img1 = cv2.imread("lena.png", 0)
+img1 = cv2.imread("../data/lena.png", 0)
 img2 = img1[:, ::-1]+0
 
 t1 = cv2.getTickCount()

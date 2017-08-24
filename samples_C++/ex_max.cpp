@@ -23,7 +23,7 @@ int main(int agrc,  char* argv[]){
 	int64 time3 = cv::getTickCount();
 	std::cout << (time3-time2)/cv::getTickFrequency() << std::endl;
 
-	cv::imwrite("img3.png", img3);
-	cv::imwrite("img4.png", img4);
+	cv::imwrite("ex_max.png", img3);
+	cv::imwrite("ex_max_loop.png", img4);
 }
 

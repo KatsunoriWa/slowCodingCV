@@ -1,4 +1,12 @@
 #include <opencv2/opencv.hpp>
+void my_absdiff(const cv::Mat &img1, const cv::Mat &img2, cv::Mat &img4){
+	img4=cv::Mat::zeros(img1.size(), img1.type());	
+	for(int i=0; i<img1.rows; i++){
+		for(int j=0; j<img1.cols;j++){
+			img4.at<uchar>(i,j) = std::abs(img1.at<uchar>(i,j) - img2.at<uchar>(i,j));
+		}
+	}
+} 
 
 int main(int agrc,  char* argv[]){
 	std::string name1 = "../../data/lena.png";
@@ -13,14 +21,11 @@ int main(int agrc,  char* argv[]){
 	int64 time1 = cv::getTickCount();
 	
 	std::cout << (time1-time0)/cv::getTickFrequency() << std::endl;
-	
-	cv::Mat img4=cv::Mat::zeros(img1.size(), img1.type());
+
 	int64 time2 = cv::getTickCount();
-	for(int i=0; i<img1.rows; i++){
-		for(int j=0; j<img1.cols;j++){
-			img4.at<uchar>(i,j) = std::abs(img1.at<uchar>(i,j) - img2.at<uchar>(i,j));
-		}
-	}
+	
+	cv::Mat img4;
+	my_absdiff(img1, img2, img4);
 	int64 time3 = cv::getTickCount();
 	std::cout << (time3-time2)/cv::getTickFrequency() << std::endl;
 

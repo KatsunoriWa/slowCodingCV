@@ -18,7 +18,7 @@ cv2.imwrite("img4.png", img4)
 t5 = cv2.getTickCount()
 img5 = (np.array(img2, dtype=np.int16) -np.array(img1,dtype=np.int16))/2 +128
 t6 = cv2.getTickCount()
-cv2.imwrite("img5.png", img4)
+cv2.imwrite("img5.png", img5)
 
 print (t2-t1)/cv2.getTickFrequency()
 print (t4-t3)/cv2.getTickFrequency()
